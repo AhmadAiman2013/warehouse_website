@@ -31,7 +31,8 @@ SECRET_KEY = os.getenv('DJANGO_SECRET')
 DEBUG = False
 
 ALLOWED_HOSTS = [
-    "https://apiwarehouse.ahmdaimn.xyz"
+    "apiwarehouse.ahmdaimn.xyz",
+    "warehouse.ahmdaimn.xyz" 
 ]
 
 REST_FRAMEWORK = {
@@ -168,7 +169,7 @@ CORS_ALLOW_HEADERS = (
 
 SECURE_SSL_REDIRECT = True
 # SESSION_COOKIE_SECURE = True
-SECURE_HSTS_SECONDS = 0
+SECURE_HSTS_SECONDS = 31536000
 SECURE_HSTS_PRELOAD = True
 # CSRF_COOKIE_SECURE = True
 SECURE_HSTS_INCLUDE_SUBDOMAINS = True
