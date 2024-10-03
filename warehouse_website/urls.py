@@ -21,13 +21,13 @@ from rest_framework_simplejwt.views import TokenRefreshView
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('api/user/register', CreateUserView.as_view(), name='register'),
-    path('api/token', MyTokenObtainPairView.as_view(), name='get_token'),
+    path('api/user/register/', CreateUserView.as_view(), name='register'),
+    path('api/token/', MyTokenObtainPairView.as_view(), name='get_token'),
     path('api/token/refresh/', TokenRefreshView.as_view(), name='refresh'),
-    path('api/inbound', InboundListCreateView.as_view(), name='inbound-list'),
-    path('api/inbound/<int:pk>', InboundDetailView.as_view(), name='inbound-detail'),
-    path('api/outbound', OutboundListCreateView.as_view(), name='outbound-list'),
-    path('api/inventory/<int:pk>', InventoryDetailView.as_view(), name='inventory-detail'),
+    path('api/inbound/', InboundListCreateView.as_view(), name='inbound-list'),
+    path('api/inbound/<int:pk>/', InboundDetailView.as_view(), name='inbound-detail'),
+    path('api/outbound/', OutboundListCreateView.as_view(), name='outbound-list'),
+    path('api/inventory/<int:pk>/', InventoryDetailView.as_view(), name='inventory-detail'),
     path('api/inventory/list/', InventoryList.as_view(), name='inventory-list-filter'),
-    path('api/inventory', InventoryCreateView.as_view(), name='inventory-create')
+    path('api/inventory/', InventoryCreateView.as_view(), name='inventory-create')
 ]
