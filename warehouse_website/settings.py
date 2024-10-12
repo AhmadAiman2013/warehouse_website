@@ -12,10 +12,10 @@ https://docs.djangoproject.com/en/5.1/ref/settings/
 
 from pathlib import Path
 from datetime import timedelta
-from dotenv import load_dotenv
+# from dotenv import load_dotenv
 import os
 
-load_dotenv()
+# load_dotenv()
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -25,14 +25,15 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/5.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = os.getenv('DJANGO_SECRET')
+SECRET_KEY = "pwyw*)hg-_+sy=eny)6oo5jbd$pu1jy8=36+x%wm8cji5l3p*6"
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = [
-    "apiwarehouse.ahmdaimn.xyz",
-    "warehouse.ahmdaimn.xyz" 
+    # "apiwarehouse.ahmdaimn.xyz",
+    # "warehouse.ahmdaimn.xyz" 
+    "*"
 ]
 
 REST_FRAMEWORK = {
@@ -156,22 +157,22 @@ STATIC_URL = 'static/'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-# CORS_ALLOW_ALL_ORIGINS = True
+CORS_ALLOW_ALL_ORIGINS = True
 
-CORS_ALLOWED_ORIGINS = [
-    "https://warehouse.ahmdaimn.xyz"
-]
+# CORS_ALLOWED_ORIGINS = [
+#     "https://warehouse.ahmdaimn.xyz"
+# ]
 CORS_ALLOW_CREDENTIALS = False
 CORS_ALLOW_HEADERS = (
     'content-type',
     'Authorization',
 )
 
-SECURE_SSL_REDIRECT = True
-# SESSION_COOKIE_SECURE = True
-SECURE_HSTS_SECONDS = 31536000
-SECURE_HSTS_PRELOAD = True
-# CSRF_COOKIE_SECURE = True
-SECURE_HSTS_INCLUDE_SUBDOMAINS = True
+# SECURE_SSL_REDIRECT = True
+# # SESSION_COOKIE_SECURE = True
+# SECURE_HSTS_SECONDS = 31536000
+# SECURE_HSTS_PRELOAD = True
+# # CSRF_COOKIE_SECURE = True
+# SECURE_HSTS_INCLUDE_SUBDOMAINS = True
 
-APPEND_SLASH = False
+# APPEND_SLASH = False

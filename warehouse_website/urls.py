@@ -28,6 +28,6 @@ urlpatterns = [
     path('api/inbound/<int:pk>', InboundDetailView.as_view(), name='inbound-detail'),
     path('api/outbound', OutboundListCreateView.as_view(), name='outbound-list'),
     path('api/inventory/<int:pk>', InventoryDetailView.as_view(), name='inventory-detail'),
-    path('api/inventory/list', InventoryList.as_view(), name='inventory-list-filter'),
+    path('api/inventory/list/', InventoryList.as_view(), name='inventory-list-filter'),
     path('api/inventory', InventoryCreateView.as_view(), name='inventory-create')
 ]
